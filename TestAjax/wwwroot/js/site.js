@@ -14,7 +14,6 @@ function myFunction(artist)
                 alert("State : " + result.readyState + " - Status : " + result.status);
                 alert(result.responseText);
                 var arr = JSON.parse(result.responseText);
-                //$.ajaxSettings.traditional = true;
                 $.ajax(
                     {
                         url: 'Supply/GetArtistsCard',
