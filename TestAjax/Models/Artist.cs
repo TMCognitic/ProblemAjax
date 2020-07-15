@@ -7,7 +7,7 @@ namespace TestAjax.Models
 {
     public class Artist
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public string Type { get; set; }
         public int Score { get; set; }
         public string Name { get; set; }

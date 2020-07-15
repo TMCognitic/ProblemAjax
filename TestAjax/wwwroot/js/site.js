@@ -14,13 +14,13 @@ function myFunction(artist)
                 alert("State : " + result.readyState + " - Status : " + result.status);
                 alert(result.responseText);
                 var arr = JSON.parse(result.responseText);
+                //$.ajaxSettings.traditional = true;
                 $.ajax(
                     {
                         url: 'Supply/GetArtistsCard',
                         type: 'Post',
-                        data: "{ 'artists':" + JSON.stringify(arr.artists) + '}',
+                        data: JSON.stringify(arr.artists),
                         contentType: 'application/json; charset=utf-8',
-                        //dataType: 'json',
                         complete: function (ArtistCard) {
                             alert("State : " + ArtistCard.readyState + " - Status : " + ArtistCard.status);
                             alert(ArtistCard.responseText);
