@@ -15,16 +15,7 @@ namespace TestAjax.Controllers
     {
         [HttpPost]
         public IActionResult GetArtistsCard([FromBody] Artist[] artists)
-        {            
-            //string bodyStr = "";
-            
-            //using (StreamReader reader = new StreamReader(Request.Body, Encoding.UTF8, true, 1024, true))
-            //{
-            //    bodyStr = reader.ReadToEndAsync().Result;
-            //}
-
-            //Artist[] artists = JsonConvert.DeserializeObject<Artist[]>(bodyStr);
-
+        {
             return PartialView();
         }
     }
